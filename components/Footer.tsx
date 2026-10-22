@@ -43,11 +43,11 @@ export default function Footer({
           </a>
           by
           <a
-            href='0977756486'
+            href=''
             target='_blank'
             rel='noopener noreferrer'
             className='inline-flex items-center gap-1.5 font-medium text-green-600 transition-colors hover:text-amber-700'>
-            Nguyễn Kỳ Duyên (Con cháu đời 16)
+            Nguyễn Kỳ Duyên
           </a>
         </p>
       </div>
