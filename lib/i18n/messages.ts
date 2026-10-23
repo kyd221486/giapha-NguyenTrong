@@ -362,27 +362,27 @@ export const messages = {
     unexpectedError: 'Đã xảy ra lỗi không mong muốn',
     oauthNotConfigured:
       'Đăng nhập với {provider} chưa được cấu hình trên hệ thống.',
-    aboutTitle: 'Giới thiệu dự án',
+    aboutTitle: 'Giới thiệu',
     aboutDescription:
-      'Gia Phả OS là một giải pháp mã nguồn mở được thiết kế giúp các dòng họ, gia đình tự xây dựng và quản lý cây phả hệ của riêng mình. Dự án giúp bảo tồn và truyền đạt lại thông tin cội nguồn một cách trực quan, hiện đại, và đặc biệt là an toàn.',
-    privacyTitle: 'Tuyên bố từ chối trách nhiệm & Quyền riêng tư',
+      'Gia phả dòng họ Nguyễn Trọng được xây dựng nhằm lưu giữ cội nguồn, ghi chép các thế hệ, kết nối các chi nhánh và giúp con cháu dù ở gần hay xa đều hiểu rõ hơn về lịch sử dòng họ, biết trân trọng công lao của tổ tiên và có trách nhiệm gìn giữ, phát huy truyền thống gia đình, dòng tộc.',
+    privacyTitle: 'Trách nhiệm & Quy định',
     sourceOnly:
-      'Dự án này chỉ cung cấp mã nguồn (source code). Không có bất kỳ dữ liệu cá nhân nào được thu thập hay lưu trữ bởi tác giả.',
-    selfHostedTitle: 'Tự lưu trữ hoàn toàn (Self-hosted):',
+      'Đây không chỉ là nơi lưu giữ thông tin về các thế hệ, mà còn là sợi dây kết nối tình thân, góp phần vun đắp niềm tự hào, tinh thần đoàn kết và ý thức hướng về cội nguồn của toàn thể con cháu dòng họ Nguyễn Trọng hôm nay và mai sau.',
+    selfHostedTitle: 'Nghiêm cấm:',
     selfHostedText:
-      'Khi bạn triển khai ứng dụng, toàn bộ dữ liệu gia phả được lưu trữ trong tài khoản Supabase của chính bạn. Tác giả dự án không có quyền truy cập vào database đó.',
-    noDataTitle: 'Không thu thập dữ liệu:',
+      'Xóa dữ liệu, chỉnh sửa dữ liệu sai lệch với thực tế. Phát tán dữ liệu trên mạng Internet. Sử dụng dữ liệu vào mục đích không chính đáng',
+    noDataTitle: 'Bổ sung dữ liệu:',
     noDataText:
-      'Không có analytics, tracking, telemetry hay bất kỳ hình thức thu thập thông tin người dùng nào được tích hợp trong mã nguồn.',
-    dataControlTitle: 'Bạn kiểm soát dữ liệu của bạn:',
+      'Thường xuyên cập nhật, bổ sung thông tin gia phả khi có biến động như: có người thân mất, có thế hệ mới được sinh ra...',
+    dataControlTitle: 'Kiểm soát dữ liệu:',
     dataControlText:
-      'Mọi dữ liệu gia đình và thông tin thành viên nằm hoàn toàn trong cơ sở dữ liệu Supabase mà bạn tạo và quản lý. Bạn có thể xóa, xuất hoặc di chuyển dữ liệu bất cứ lúc nào.',
-    demoTitle: 'Demo công khai:',
+      'Mọi dữ liệu dòng họ đều do những thành viên do các Chi, Ngành, Phái tự bổ sung; nếu các thành viên khác phát hiện có sự sai lệch thì thông báo để chỉnh sửa cho phù hợp.',
+    demoTitle: 'Sử dụng Gia phả:',
     demoText:
-      'Trang demo sử dụng dữ liệu mẫu hư cấu, không chứa thông tin của người thật. Không nên nhập thông tin cá nhân thật vào trang demo.',
+      'Nâng cao ý thức, trách nhiệm sử dụng; tự chịu mọi trách nhiệm nếu sử dụng sai mục đích',
     contactTitle: 'Liên hệ & Góp ý',
     contactText:
-      'Nếu bạn có thắc mắc, đề xuất tính năng hoặc muốn báo lỗi khi sử dụng phần mềm, vui lòng gửi email về địa chỉ:',
+      'Nếu có thắc mắc, đề xuất bổ sung thông tin hoặc muốn báo lỗi khi sử dụng, vui lòng gửi email về địa chỉ:',
     show: 'Hiển thị',
     display: 'HIỂN THỊ',
     minimal: 'Tối giản',
