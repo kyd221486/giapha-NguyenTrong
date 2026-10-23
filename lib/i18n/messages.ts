@@ -364,7 +364,7 @@ export const messages = {
       'Đăng nhập với {provider} chưa được cấu hình trên hệ thống.',
     aboutTitle: 'Giới thiệu',
     aboutDescription:
-      'Gia phả dòng họ Nguyễn Trọng được xây dựng nhằm lưu giữ cội nguồn, ghi chép các thế hệ, kết nối các chi nhánh và giúp con cháu dù ở gần hay xa đều hiểu rõ hơn về lịch sử dòng họ, biết trân trọng công lao của tổ tiên và có trách nhiệm gìn giữ, phát huy truyền thống gia đình, dòng tộc.',
+      'được xây dựng nhằm lưu giữ cội nguồn, ghi chép các thế hệ, kết nối các chi nhánh và giúp con cháu dù ở gần hay xa đều hiểu rõ hơn về lịch sử dòng họ, biết trân trọng công lao của tổ tiên và có trách nhiệm gìn giữ, phát huy truyền thống gia đình, dòng tộc.',
     privacyTitle: 'Trách nhiệm & Quy định',
     sourceOnly:
       'Đây không chỉ là nơi lưu giữ thông tin về các thế hệ, mà còn là sợi dây kết nối tình thân, góp phần vun đắp niềm tự hào, tinh thần đoàn kết và ý thức hướng về cội nguồn của toàn thể con cháu dòng họ Nguyễn Trọng hôm nay và mai sau.',
