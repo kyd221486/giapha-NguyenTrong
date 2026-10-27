@@ -35,14 +35,12 @@ interface MembersViewsProps {
   persons: Person[]
   relationships: Relationship[]
   canEdit?: boolean
-  groupLabels: Record<string, string>
 }
 
 export default function MembersViews({
   persons,
   relationships,
-  canEdit = false,
-  groupLabels
+  canEdit = false
 }: MembersViewsProps) {
   const { view: currentView, rootId, setRootId } = useMemberListView()
   const searchParams = useSearchParams()
@@ -165,7 +163,6 @@ export default function MembersViews({
               relationships={relationships}
               roots={roots}
               canEdit={canEdit}
-              groupLabels={groupLabels}
             />
           )}
           {currentView === 'mindmap' && (
