@@ -7,6 +7,7 @@ import { useI18n } from '@/lib/i18n/useI18n'
 import { Person } from '@/types'
 
 import FamilyNodeCard from './FamilyNodeCard'
+import FamilyTreeGroupLabel from './FamilyTreeGroupLabel'
 
 interface TreeData {
   person: Person | null
@@ -21,6 +22,8 @@ interface FamilyTreeNodeRendererProps {
   showAvatar: boolean
   hideExpandButtons: boolean
   toggleCollapse: (personId: string) => void
+  groupLabels: Record<string, string>
+  canEdit: boolean
 }
 
 /** Recursively renders the CSS-tree node list. */
@@ -30,7 +33,9 @@ export default function FamilyTreeNodeRenderer({
   collapsedNodes,
   showAvatar,
   hideExpandButtons,
-  toggleCollapse
+  toggleCollapse,
+  groupLabels,
+  canEdit
 }: FamilyTreeNodeRendererProps) {
   const { t } = useI18n()
 
@@ -52,7 +57,7 @@ export default function FamilyTreeNodeRenderer({
     return (
       <li>
         <div
-          className='node-container inline-flex flex-col items-center'
+          className='node-container group inline-flex flex-col items-center'
           data-level={level}>
           {/* Main Person & Spouses Row */}
           <div
@@ -91,6 +96,13 @@ export default function FamilyTreeNodeRenderer({
               </button>
             )}
           </div>
+          {hasChildren && (
+            <FamilyTreeGroupLabel
+              parentPersonId={personId}
+              initialLabel={groupLabels[personId] ?? ''}
+              canEdit={canEdit}
+            />
+          )}
         </div>
 
         {/* Render Children (if any and not collapsed) */}
