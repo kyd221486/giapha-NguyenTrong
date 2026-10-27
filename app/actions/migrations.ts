@@ -22,8 +22,7 @@ const MIGRATION_FILES = [
   'docs/migrations/20260524125731_add_gallery.sql',
   'docs/migrations/20260831140135_security_and_approval_hardening.sql',
   'docs/migrations/20260901000000_security_definer_and_rls_hardening.sql',
-  'docs/migrations/20260904000000_add_data_api_table_grants.sql',
-  'docs/migrations/20261027000000_add_family_tree_labels.sql'
+  'docs/migrations/20260904000000_add_data_api_table_grants.sql'
 ] as const
 
 interface MigrationDefinition {
