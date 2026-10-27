@@ -154,7 +154,6 @@ export default function MembersViews({
               initialPersons={persons}
               relationships={relationships}
               canEdit={canEdit}
-              groupLabels={groupLabels}
             />
           </div>
         )}
@@ -166,6 +165,7 @@ export default function MembersViews({
               relationships={relationships}
               roots={roots}
               canEdit={canEdit}
+              groupLabels={groupLabels}
             />
           )}
           {currentView === 'mindmap' && (
