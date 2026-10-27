@@ -145,7 +145,7 @@ export default function FamilyTreeGroupLabel({
               onClick={beginEditing}
               title={label ? 'Sửa nhãn nhóm con' : 'Thêm nhãn nhóm con'}
               aria-label={label ? 'Sửa nhãn nhóm con' : 'Thêm nhãn nhóm con'}
-              className={'flex size-6 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-400 shadow-sm transition hover:border-amber-300 hover:text-amber-700 opacity-0 group-hover:opacity-100 focus:opacity-100'}>
+              className={'flex size-6 shrink-0 items-center justify-center rounded-full border border-stone-200 bg-white text-stone-400 shadow-sm transition hover:border-amber-300 hover:text-amber-700 opacity-60 group-hover:opacity-100 focus:opacity-100'}>
               {label ? <Pencil className='size-3' /> : <Plus className='size-3' />}
             </button>
           )}
