@@ -76,7 +76,7 @@ export default function FamilyTreeGroupLabel({
             value={draft}
             maxLength={120}
             onChange={(event) => setDraft(event.target.value)}
-            placeholder='Ví dụ: Con ông Huy bà Sơn'
+            placeholder='Thêm nội dung nhãn dán'
             aria-label='Nhãn nhóm con'
             className='w-52 rounded-lg border border-stone-200 px-2 py-1 text-sm text-stone-700 outline-none focus:border-amber-400'
           />
