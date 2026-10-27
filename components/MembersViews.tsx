@@ -35,12 +35,14 @@ interface MembersViewsProps {
   persons: Person[]
   relationships: Relationship[]
   canEdit?: boolean
+  groupLabels: Record<string, string>
 }
 
 export default function MembersViews({
   persons,
   relationships,
-  canEdit = false
+  canEdit = false,
+  groupLabels
 }: MembersViewsProps) {
   const { view: currentView, rootId, setRootId } = useMemberListView()
   const searchParams = useSearchParams()
@@ -152,6 +154,7 @@ export default function MembersViews({
               initialPersons={persons}
               relationships={relationships}
               canEdit={canEdit}
+              groupLabels={groupLabels}
             />
           </div>
         )}
