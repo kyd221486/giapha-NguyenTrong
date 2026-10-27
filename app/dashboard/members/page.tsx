@@ -26,7 +26,7 @@ export default async function FamilyTreePage({ searchParams }: PageProps) {
   // we will fetch data here and pass it down as props.
   const supabase = await getSupabase()
 
-  const [personsRes, relsRes] = await Promise.all([
+  const [personsRes, relsRes, labelsRes] = await Promise.all([
     fetchAllRows((from, to) =>
       supabase
         .from('persons')
@@ -37,11 +37,18 @@ export default async function FamilyTreePage({ searchParams }: PageProps) {
     ),
     fetchAllRows((from, to) =>
       supabase.from('relationships').select('*').order('id').range(from, to)
-    )
+    ),
+    supabase.from('family_tree_labels').select('parent_person_id, label')
   ])
 
   const persons = personsRes.data || []
   const relationships = relsRes.data || []
+  if (labelsRes.error && !labelsRes.error.message.includes('family_tree_labels')) {
+    console.error('Cannot load family tree labels:', labelsRes.error.message)
+  }
+  const groupLabels = Object.fromEntries(
+    (labelsRes.data ?? []).map((row) => [row.parent_person_id, row.label])
+  ) as Record<string, string>
 
   // Prepare map and roots for tree views
   const personsMap = new Map()
@@ -78,6 +85,7 @@ export default async function FamilyTreePage({ searchParams }: PageProps) {
           persons={persons}
           relationships={relationships}
           canEdit={canEdit}
+          groupLabels={groupLabels}
         />
 
         <MemberDetailModal />
