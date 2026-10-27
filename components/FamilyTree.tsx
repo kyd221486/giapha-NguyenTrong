@@ -25,12 +25,14 @@ export default function FamilyTree({
   personsMap,
   relationships,
   roots,
-  canEdit
+  canEdit,
+  groupLabels
 }: {
   personsMap: Map<string, Person>
   relationships: Relationship[]
   roots: Person[]
   canEdit?: boolean
+  groupLabels: Record<string, string>
 }) {
   const containerRef = useRef<HTMLDivElement>(null)
   const [hideDaughtersInLaw, setHideDaughtersInLaw] = useState(false)
@@ -257,6 +259,8 @@ export default function FamilyTree({
               showAvatar={showAvatar}
               hideExpandButtons={hideExpandButtons}
               toggleCollapse={toggleCollapse}
+              groupLabels={groupLabels}
+              canEdit={Boolean(canEdit)}
             />
           </ul>
         </div>
@@ -275,7 +279,9 @@ function MemoizedNodeTree({
   collapsedNodes,
   showAvatar,
   hideExpandButtons,
-  toggleCollapse
+  toggleCollapse,
+  groupLabels,
+  canEdit
 }: {
   roots: Person[]
   getTreeData: (personId: string) => ReturnType<typeof getFilteredTreeData>
@@ -283,6 +289,8 @@ function MemoizedNodeTree({
   showAvatar: boolean
   hideExpandButtons: boolean
   toggleCollapse: (personId: string) => void
+  groupLabels: Record<string, string>
+  canEdit: boolean
 }) {
   const treeContent = useMemo(
     () => (
@@ -293,6 +301,8 @@ function MemoizedNodeTree({
         showAvatar={showAvatar}
         hideExpandButtons={hideExpandButtons}
         toggleCollapse={toggleCollapse}
+        groupLabels={groupLabels}
+        canEdit={canEdit}
       />
     ),
     [
@@ -301,7 +311,9 @@ function MemoizedNodeTree({
       collapsedNodes,
       showAvatar,
       hideExpandButtons,
-      toggleCollapse
+      toggleCollapse,
+      groupLabels,
+      canEdit
     ]
   )
   return treeContent
