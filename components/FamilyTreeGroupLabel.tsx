@@ -88,6 +88,35 @@ export default function FamilyTreeGroupLabel({
             className='flex size-7 items-center justify-center rounded-lg bg-amber-600 text-white hover:bg-amber-700 disabled:opacity-50'>
             <Check className='size-4' />
           </button>
+          {label && (
+            <button
+              type='button'
+              onClick={async () => {
+                if (saving) return
+                setSaving(true)
+                setError('')
+                try {
+                  const result = await saveFamilyTreeLabel(parentPersonId, '')
+                  if (!result.success) {
+                    setError(result.error)
+                    return
+                  }
+                  setLabel('')
+                  setDraft('')
+                  setEditing(false)
+                } catch {
+                  setError('Có lỗi khi xóa nhãn. Vui lòng thử lại.')
+                } finally {
+                  setSaving(false)
+                }
+              }}
+              disabled={saving}
+              title='Xóa nhãn'
+              aria-label='Xóa nhãn'
+              className='flex size-7 items-center justify-center rounded-lg border border-red-200 text-red-600 hover:bg-red-50 disabled:opacity-50'>
+              <X className='size-4' />
+            </button>
+          )}
           <button
             type='button'
             onClick={cancelEditing}
